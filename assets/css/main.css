@@ -1,15 +1,5 @@
 /* Voir les blocs */
 
-.main-header,
-.main-content,
-.main-footer
-{
-    border: 1px solid red;
-}
-
-
-
-
 /* 
  * LAYOUT
  */
@@ -17,9 +7,10 @@ body {
 	min-height:100vh;
 	display:flex;
 	flex-direction:column; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-    width: 600px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -27,10 +18,12 @@ body {
 .row {
     display: flex;
     flex-direction: row;
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 .col {
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .col-1 {
     flex-grow: 1;
@@ -190,4 +183,104 @@ body {
 
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+
+
+/* 
+ * MAIN CONTENT
+ */
+section {
+    /* border: 10px solid red; */
+    margin-bottom: 15px;
+}
+
+section h2 {
+    background-color: #333333;
+    padding: 8px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+section .info {
+    /* border: 5px solid green; */
+    margin-bottom: 30px;
+
+    line-height: 24px
+}
+
+/* Positionnement de l'image - Methode 1 (old school) */
+/* section .info::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+section .info img {
+    height: 180px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+} */
+
+/* Positionnement de l'image - Methode 2 (texte sur 1 colonne) */
+section .info {
+    display: flex;
+}
+section .info img {
+    height: 180px;
+    margin-right: 15px;
+}
+
+section .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+section .articles {
+    /* border: 5px solid pink; */
+    /* margin-bottom: 15px; */
+    display: flex;
+}
+section .articles .article {
+    /* border: 5px solid red; */
+    /* margin-bottom: 15px; */
+    width: 25%;
+}
+section .articles .article img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card {
+    /* border: 1px solid green; */
+    /* height: 150px; */
+    padding: 15px;
+}
+
+
+/*
+ * SIDEBAR
+ */
+aside {
+    /* border: 1px solid red; */
+    width: 280px;
+}
+
+aside .share {
+    width: 100%;
+}
+
+aside .sidebar__nav {
+    list-style-type: disc;
+}
+
+aside .sidebar__nav li {
+    margin-left: 25px;
+    /* border: 1px solid red; */
+    margin-bottom: 6px;
+}
+
+aside .sidebar__nav li a {
+    color:#333333;
+    text-decoration: none;
 }
